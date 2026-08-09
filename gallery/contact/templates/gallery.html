@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<h1>My Image Gallery</h1>
+
+<img src="{% static 'images/image1.jpg' %}" alt="Image 1" width="250">
+<p>Beautiful Nature</p>
+
+<img src="{% static 'images/image2.jpg' %}" alt="Image 2" width="250">
+<p>Sunset View</p>
+
+<img src="{% static 'images/image3.jpg' %}" alt="Image 3" width="250">
+<p>Mountain Landscape</p>
+
+<br><br>
+
+<a href="/contact/">Go to Contact Page</a>
+
+</body>
+</html>
