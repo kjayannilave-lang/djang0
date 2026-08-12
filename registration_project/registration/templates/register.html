@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+</head>
+<body>
+
+    <h1>Registration</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Full Name:</label>
+        {{ form.full_name }}
+        
+        {% if form.full_name.errors %}
+            <div style="color: red;">
+                {{ form.full_name.errors }}
+            </div>
+        {% endif %}
+
+        <br><br>
+
+        <label>Email:</label>
+        {{ form.email }}
+
+        {% if form.email.errors %}
+            <div style="color: red;">
+                {{ form.email.errors }}
+            </div>
+        {% endif %}
+
+        <br><br>
+
+        <label>Password:</label>
+        {{ form.password }}
+
+        {% if form.password.errors %}
+            <div style="color: red;">
+                {{ form.password.errors }}
+            </div>
+        {% endif %}
+
+        <br><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</body>
+</html>
