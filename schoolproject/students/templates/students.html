@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        .container {
+            width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .student {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .passed {
+            color: green;
+            font-weight: bold;
+        }
+
+        .failed {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Classroom Students</h1>
+
+    {% if students %}
+
+        {% for student in students %}
+
+            <div class="student">
+
+                <h3>{{ student.name }}</h3>
+
+                <p>Grade: {{ student.grade }}</p>
+
+                {% if student.passed %}
+                    <p class="passed">Passed</p>
+                {% else %}
+                    <p class="failed">Failed</p>
+                {% endif %}
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p>No students found.</p>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
