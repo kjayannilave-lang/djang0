@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Form</title>
+</head>
+<body>
+
+    <h1>Add Movie</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">Save Movie</button>
+    </form>
+
+    {% if message %}
+        <h2>{{ message }}</h2>
+    {% endif %}
+
+</body>
+</html>
