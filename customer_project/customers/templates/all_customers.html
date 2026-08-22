@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Customers</title>
+</head>
+<body>
+
+<h1>All Customers</h1>
+
+{% for customer in customers %}
+
+    <p>
+        <strong>Name:</strong> {{ customer.name }}
+        <br>
+        <strong>Email:</strong> {{ customer.email }}
+    </p>
+
+    <hr>
+
+{% empty %}
+
+    <p>No customers found.</p>
+
+{% endfor %}
+
+<br>
+
+<a href="{% url 'add_customer' %}">
+    Add Customer
+</a>
+
+<br>
+
+<a href="{% url 'filtered_customers' %}">
+    View Example.com Customers
+</a>
+
+</body>
+</html>
