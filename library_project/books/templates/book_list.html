@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book List</title>
+</head>
+<body>
+
+    <h1>All Books</h1>
+
+    {% for book in books %}
+
+        <p>
+            <strong>Title:</strong> {{ book.title }}
+            <br>
+            <strong>Author:</strong> {{ book.author }}
+        </p>
+
+        <hr>
+
+    {% empty %}
+
+        <p>No books found.</p>
+
+    {% endfor %}
+
+    <a href="{% url 'add_book' %}">Add Another Book</a>
+
+</body>
+</html>
