@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+</head>
+<body>
+
+    <h1>Student Page</h1>
+
+    <h2>{{ message }}</h2>
+
+    <h3>Student List</h3>
+
+    {% for student in students %}
+        <p>{{ student }}</p>
+    {% endfor %}
+
+    <br>
+
+    <a href="{% url 'home' %}">
+        Back to Home
+    </a>
+
+</body>
+</html>
