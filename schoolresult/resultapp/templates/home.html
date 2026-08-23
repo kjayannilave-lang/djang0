@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Website</title>
+</head>
+<body>
+
+    <h1>School Website</h1>
+
+    <h2>Student List</h2>
+
+    {% for student in students %}
+
+        <p>
+            {{ student }}
+
+            <a href="{% url 'result' student %}">
+                View Result
+            </a>
+        </p>
+
+    {% endfor %}
+
+</body>
+</html>
